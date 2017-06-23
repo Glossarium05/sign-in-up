@@ -27,7 +27,7 @@
                 <img class="heart" src="img/heart.png" alt="">
                 <div class="errorMessageText">
                     <p>
-                        Global error: his error message resulted from the user choosing not to restart Windows
+                        <b>Global error:</b> his error message resulted from the user choosing not to restart Windows
                         immediately
                         after program removal. The program removal was successful from the user's point of view.
                     </p>
@@ -35,17 +35,31 @@
             </div>
             <div class="loginForm">
                 <div class="notes">
-                    <h4> LOGIN </h4>
+                    <h4 class="login"> LOGIN </h4>
                     <p class="enterLogin">
-                        Enter your login and password/
+                        Enter your login and password
                     </p>
-                    <form action="">
-                        <input type="text" class="inputForUser">
-                        <input type="password" class="inputForUser">
-                        <a href="#">Forgot your password?</a>
-                        <input type="submit" value="Enter">
-                    </form>
                 </div>
+                <form action="">
+                    <div class="wrapperForUserInput">
+                        <input type="text" class="inputForUser" id="login">
+                        <div class="loginImg">
+                            <img src="img/user-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="wrapperForUserInput">
+                        <input type="password" class="inputForUser" id="password">
+                        <div class="loginPass">
+                            <img src="img/key.png" alt="">
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <a class="link" id="forgotPass" href="#">Forgot your password?</a>
+                        <button type="submit" class="submitButton">Enter</button>
+                    </div>
+                </form>
+                <p class="supplyAccCreation">Don't have an account yet? <a class="link" href="">Create an account!</a>
+                </p>
             </div>
         </div>
     </div>

@@ -1,10 +1,9 @@
 $constBlue: #70b6e2;
+
 @font-face {
   font-family: openSans;
   src: url(../fonts/openSans-Regular.ttf);
 }
-
-
 
 body {
   background-color: $constBlue;
@@ -14,16 +13,18 @@ body {
 .main-flex-container {
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-
-  img{
-    margin: 20px 0;
+  overflow: auto;
+  img {
+    margin: 20% 0;
   }
 }
-
 
 .container {
   height: 505px;
@@ -31,12 +32,13 @@ body {
   display: flex;
   flex-direction: row;
   .welcomeBlock {
-    width: 355px;
+    width: 26%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 62px;
     background: url(../img/bgAbstract.jpg);
+    background-repeat: no-repeat;
     color: white;
     .whiteBlock {
       width: 94px;
@@ -53,28 +55,97 @@ body {
   .loginBlock {
     display: flex;
     flex-direction: column;
-    width: 510px;
+    justify-content: center;
+    width: 70%;
     .globalErrorBlock {
       display: flex;
+      height: 25%;
       background-color: #ee6969;
       justify-content: space-around;
       align-items: center;
       padding: 1%;
       .heart {
-        height: 20px;
-        width: 20px;
+        height: 35px;
+        width: 35px;
       }
       .errorMessageText {
         width: 401px;
+        height: 77px;
         text-align: justify;
         color: white;
         font-size: 12px;
       }
     }
     .loginForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       background-color: white;
       flex-grow: 1;
-      padding: 62px;
+      padding: 20%;
+      .supplyAccCreation {
+        margin-top: 18%;
+        font-size: 12px;
+      }
+      .login {
+        color: $constBlue;
+      }
+      .wrapperForUserInput {
+        position: relative;
+      }
+      .inputForUser {
+        width: 230px;
+        height: 40px;
+        margin-top: 10px;
+        border: 1px solid #ced8ea;
+        padding: 0 50px;
+        color: #909090;
+      }
+      .loginImg {
+        border-right: solid 1px #ced8ea;
+        padding: 0 15px 0  0;
+        position: absolute;
+        top: 28%;
+        left: 6%;
+      }
+
+      .loginPass {
+        position: absolute;
+        border-right: solid 1px #ced8ea;
+        padding: 0 15px 0  0;
+        top: 25%;
+        left: 6%;
+      }
+      #password {
+        margin-bottom: 25px;
+      }
+      .link {
+        color: $constBlue;
+        font-size: 10pt;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        width: 100%;
+      }
+      #forgotPas {
+        margin-top: 10%;
+      }
+      .submitButton {
+        width: 117px;
+        height: 42px;
+        background-color: $constBlue;
+        background-image: url("../img/padlock.png");
+        background-repeat: no-repeat;
+        background-position: 20px;
+        padding-left: 30px;
+        color: white;
+        font-size: 12pt;
+        text-transform: uppercase;
+        border: 1px solid;
+      }
     }
   }
 }
+
