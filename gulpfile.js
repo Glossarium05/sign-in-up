@@ -1,6 +1,3 @@
-/**
- * Created by SyneboUser on 6/23/2017.
- */
 var gulp = require('gulp'),
     sass = require('gulp-sass');
 

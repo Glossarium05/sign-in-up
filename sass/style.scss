@@ -90,6 +90,7 @@ body {
       }
       .login {
         color: $constBlue;
+        text-transform: uppercase;
       }
       .notes {
         width: 100%;
@@ -108,7 +109,7 @@ body {
       }
       .loginImg {
         border-right: solid 1px #ced8ea;
-        padding: 0 15px 0  0;
+        padding: 0 15px 0 0;
         position: absolute;
         top: 28%;
         left: 6%;
@@ -117,7 +118,7 @@ body {
       .loginPass {
         position: absolute;
         border-right: solid 1px #ced8ea;
-        padding: 0 15px 0  0;
+        padding: 0 15px 0 0;
         top: 25%;
         left: 6%;
       }
@@ -151,7 +152,9 @@ body {
         text-transform: uppercase;
         border: 1px solid;
       }
+
     }
   }
 }
+
 

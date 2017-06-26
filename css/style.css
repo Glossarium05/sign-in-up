@@ -102,6 +102,7 @@ body {
 
 .container .loginBlock .loginForm .login {
   color: #70b6e2;
+  text-transform: uppercase;
 }
 
 .container .loginBlock .loginForm .notes {
@@ -124,7 +125,7 @@ body {
 
 .container .loginBlock .loginForm .loginImg {
   border-right: solid 1px #ced8ea;
-  padding: 0 15px 0  0;
+  padding: 0 15px 0 0;
   position: absolute;
   top: 28%;
   left: 6%;
@@ -133,7 +134,7 @@ body {
 .container .loginBlock .loginForm .loginPass {
   position: absolute;
   border-right: solid 1px #ced8ea;
-  padding: 0 15px 0  0;
+  padding: 0 15px 0 0;
   top: 25%;
   left: 6%;
 }
