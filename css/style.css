@@ -92,6 +92,7 @@ body {
   background-color: white;
   flex-grow: 1;
   padding: 20%;
+  width: 60%;
 }
 
 .container .loginBlock .loginForm .supplyAccCreation {
@@ -103,12 +104,17 @@ body {
   color: #70b6e2;
 }
 
+.container .loginBlock .loginForm .notes {
+  width: 100%;
+}
+
 .container .loginBlock .loginForm .wrapperForUserInput {
   position: relative;
+  width: 70%;
 }
 
 .container .loginBlock .loginForm .inputForUser {
-  width: 230px;
+  width: 95%;
   height: 40px;
   margin-top: 10px;
   border: 1px solid #ced8ea;
@@ -143,6 +149,7 @@ body {
 
 .container .loginBlock .loginForm .wrapper {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   padding: 0;
   width: 100%;
