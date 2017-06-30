@@ -9,15 +9,17 @@ $darkGray: #616161;
 body {
   font-family: openSans;
   background-color: $blueDefault;
+  padding: 0;
 }
 
 .mainWrapper {
   height: 100vh;
   width: 100%;
+  padding: 0;
 }
 
 .contentBlock {
-  height: 55vh;
+  height: 60vh;
   margin-top: 5vh;
 }
 
@@ -43,6 +45,7 @@ input::placeholder {
   height: 100%;
   background-image: url("../img/bgAbstract.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 5%;
   .welcomeContent {
     margin: auto;
@@ -85,7 +88,6 @@ input::placeholder {
     }
   }
   .registrationContent {
-    height: 100%;
     width: 100%;
     padding: 10% 15% 10% 20%;
   }
@@ -102,7 +104,7 @@ input::placeholder {
     margin-top: 5vh;
     margin-bottom: 5vh;
     padding: 0;
-    height: 18vh;
+    height: 20vh;
     width: 18vw;
   }
   .inputWrapper {
@@ -150,8 +152,8 @@ input::placeholder {
   .createAccountWrapper {
     color: $darkGray;
     font-size: 0.9em;
-    margin-bottom: 7vh;
-    //margin-top: 3vh;
+    //margin-bottom: 7vh;
+    margin-top: 3vh;
     .link, .link:hover, .link:visited {
       color: $blueDefault;
       text-decoration: underline
@@ -160,3 +162,156 @@ input::placeholder {
 
 }
 
+
+
+//____________________________________________
+
+@media (max-width: 576px) {
+  .hint {
+    position: absolute;
+    font-size: 1em;
+    color: #70b6e2;
+    top: -70%;
+    width: 80vw;
+
+  }
+
+  .error {
+    position: absolute;
+    font-size: 1em;
+    color: #ec6446;
+    top: -70%;
+    width: 80vw;
+  }
+  .welcomeBlock {
+    height: 100%;
+    background-image: url("../img/bgAbstract.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 10%;
+    display: none!important;
+
+    .welcome {
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 3vh;
+
+    }
+    .whiteBlock {
+      width: 40%;
+      height: 4px;
+      background-color: white;
+    }
+    .weOffer {
+
+      color: white;
+      text-align: justify;
+      line-height: 1.5;
+      margin-top: 5vh;
+    }
+  }
+
+  .registrationBlock {
+    margin-top: 10vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    padding: 0;
+    .globalError {
+      background-color: #ee6969;
+      justify-content: space-around;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      padding-right: 10%;
+      padding-left: 5%;
+
+      .heart > img {
+        width: 25px;
+        height: 25px;
+      }
+      .exeption {
+        color: white;
+        width: 80%;
+        font-size: 0.9em;
+        text-align: justify;
+      }
+    }
+    .registrationContent {
+      height: 80%;
+      width: 100%;
+      padding: 0 10% 0 10%;
+    }
+    .login {
+      text-transform: uppercase;
+      color: $blueDefault;
+    }
+    .notification {
+      margin-top: 1vh;
+      font-size: 0.9em;
+      color: $darkGray;
+    }
+    #registrationForm {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      padding: 0;
+      height: 35vh;
+      width: 18vw;
+    }
+    .inputWrapper {
+      position: relative;
+      .iconWrapper {
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        padding: 5% 15% 15% 1%;
+        border-right: 1px solid #ced8ea;
+      }
+
+    }
+    .userInput {
+      width: 80vw;
+      height: 41px;
+      border: 1px solid #ced8ea;
+      padding-left: 65%;
+      color: $darkGray;
+    }
+    .userErrorInput {
+      width: 80vw;
+      height: 41px;
+      border: 2px solid #ee6969;
+      padding-left: 65%;
+      color: #ee6969;
+    }
+    .recoverLink, .recoverLink:hover, .recoverLink:visited {
+      color: $blueDefault;
+      font-size: 0.9em;
+      width: 80vw;
+      margin-bottom: 1vh;
+      text-align: center;
+      text-decoration: underline
+    }
+    #submitButton {
+      background-image: url("../img/padlock.png");
+      background-repeat: no-repeat;
+      background-color: $blueDefault;
+      background-position: 35%;
+      border: 1px solid $blueDefault;
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      height: 41px;
+      width: 80vw;
+    }
+    .createAccountWrapper {
+      color: $darkGray;
+      font-size: 0.8em;
+      text-align: center;
+      margin-bottom: 1vh;
+
+      .link, .link:hover, .link:visited {
+        color: $blueDefault;
+        text-decoration: underline
+      }
+    }
+  }
+}
