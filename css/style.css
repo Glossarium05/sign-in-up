@@ -4,172 +4,171 @@
 }
 
 body {
-  background-color: #70b6e2;
   font-family: openSans;
+  background-color: #70b6e2;
 }
 
-.main-flex-container {
+.mainWrapper {
+  height: 100vh;
   width: 100%;
+}
+
+.contentBlock {
+  height: 55vh;
+  margin-top: 5vh;
+}
+
+input::placeholder {
+  color: #d1d1d1;
+}
+
+.hint {
+  position: absolute;
+  font-size: 1em;
+  color: #70b6e2;
+  top: -70%;
+}
+
+.error {
+  position: absolute;
+  font-size: 1em;
+  color: #ec6446;
+  top: -70%;
+}
+
+.welcomeBlock {
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-}
-
-.main-flex-container img {
-  margin: 20% 0;
-}
-
-.container {
-  height: 505px;
-  width: 865px;
-  display: flex;
-  flex-direction: row;
-}
-
-.container .welcomeBlock {
-  width: 26%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 62px;
-  background: url(../img/bgAbstract.jpg);
+  background-image: url("../img/bgAbstract.jpg");
   background-repeat: no-repeat;
-  color: white;
+  padding: 5%;
 }
 
-.container .welcomeBlock .whiteBlock {
-  width: 94px;
+.welcomeBlock .welcomeContent {
+  margin: auto;
+}
+
+.welcomeBlock .welcome {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 3vh;
+}
+
+.welcomeBlock .whiteBlock {
+  width: 40%;
   height: 4px;
   background-color: white;
 }
 
-.container .welcomeBlock .welcomeSpeach {
-  width: 250px;
+.welcomeBlock .weOffer {
+  color: white;
   text-align: justify;
-  color: #c9e7fa;
-  margin-top: 5%;
+  line-height: 1.5;
+  margin-top: 5vh;
 }
 
-.container .loginBlock {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 70%;
+.registrationBlock {
+  height: 100%;
+  background-color: white;
+  padding: 0;
 }
 
-.container .loginBlock .globalErrorBlock {
-  display: flex;
-  height: 25%;
+.registrationBlock .globalError {
   background-color: #ee6969;
   justify-content: space-around;
-  align-items: center;
-  padding: 1%;
+  padding: 2%;
 }
 
-.container .loginBlock .globalErrorBlock .heart {
-  height: 35px;
-  width: 35px;
+.registrationBlock .globalError .heart > img {
+  width: 25px;
+  height: 25px;
 }
 
-.container .loginBlock .globalErrorBlock .errorMessageText {
-  width: 401px;
-  height: 77px;
-  text-align: justify;
+.registrationBlock .globalError .exeption {
   color: white;
-  font-size: 12px;
+  width: 80%;
+  font-size: 0.9em;
+  padding: 1% 5%;
 }
 
-.container .loginBlock .loginForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  flex-grow: 1;
-  padding: 20%;
-  width: 60%;
+.registrationBlock .registrationContent {
+  height: 100%;
+  width: 100%;
+  padding: 10% 15% 10% 20%;
 }
 
-.container .loginBlock .loginForm .supplyAccCreation {
-  margin-top: 18%;
-  font-size: 12px;
-}
-
-.container .loginBlock .loginForm .login {
-  color: #70b6e2;
+.registrationBlock .login {
   text-transform: uppercase;
-}
-
-.container .loginBlock .loginForm .notes {
-  width: 100%;
-}
-
-.container .loginBlock .loginForm .wrapperForUserInput {
-  position: relative;
-  width: 70%;
-}
-
-.container .loginBlock .loginForm .inputForUser {
-  width: 95%;
-  height: 40px;
-  margin-top: 10px;
-  border: 1px solid #ced8ea;
-  padding: 0 50px;
-  color: #909090;
-}
-
-.container .loginBlock .loginForm .loginImg {
-  border-right: solid 1px #ced8ea;
-  padding: 0 15px 0 0;
-  position: absolute;
-  top: 28%;
-  left: 6%;
-}
-
-.container .loginBlock .loginForm .loginPass {
-  position: absolute;
-  border-right: solid 1px #ced8ea;
-  padding: 0 15px 0 0;
-  top: 25%;
-  left: 6%;
-}
-
-.container .loginBlock .loginForm #password {
-  margin-bottom: 25px;
-}
-
-.container .loginBlock .loginForm .link {
   color: #70b6e2;
-  font-size: 10pt;
 }
 
-.container .loginBlock .loginForm .wrapper {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.registrationBlock .notification {
+  margin-top: 1vh;
+  font-size: 0.9em;
+  color: #616161;
+}
+
+.registrationBlock #registrationForm {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   padding: 0;
-  width: 100%;
+  height: 18vh;
+  width: 18vw;
 }
 
-.container .loginBlock .loginForm #forgotPas {
-  margin-top: 10%;
+.registrationBlock .inputWrapper {
+  position: relative;
 }
 
-.container .loginBlock .loginForm .submitButton {
-  width: 117px;
-  height: 42px;
-  background-color: #70b6e2;
+.registrationBlock .inputWrapper .iconWrapper {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  padding: 2% 5% 2% 1%;
+  border-right: 1px solid #ced8ea;
+}
+
+.registrationBlock .userInput {
+  width: 18vw;
+  height: 41px;
+  border: 1px solid #ced8ea;
+  padding-left: 15%;
+  color: #616161;
+}
+
+.registrationBlock .userErrorInput {
+  width: 18vw;
+  height: 41px;
+  border: 2px solid #ee6969;
+  padding-left: 15%;
+  color: #ee6969;
+}
+
+.registrationBlock .recoverLink, .registrationBlock .recoverLink:hover, .registrationBlock .recoverLink:visited {
+  color: #70b6e2;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.registrationBlock #submitButton {
   background-image: url("../img/padlock.png");
   background-repeat: no-repeat;
-  background-position: 20px;
-  padding-left: 30px;
+  background-color: #70b6e2;
+  background-position: 20%;
+  border: 1px solid #70b6e2;
   color: white;
-  font-size: 12pt;
   text-transform: uppercase;
-  border: 1px solid;
+  font-size: 0.8em;
+  height: 41px;
+  width: 7vw;
+}
+
+.registrationBlock .createAccountWrapper {
+  color: #616161;
+  font-size: 0.9em;
+  margin-bottom: 7vh;
+}
+
+.registrationBlock .createAccountWrapper .link, .registrationBlock .createAccountWrapper .link:hover, .registrationBlock .createAccountWrapper .link:visited {
+  color: #70b6e2;
+  text-decoration: underline;
 }
