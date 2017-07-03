@@ -41,6 +41,7 @@ input::placeholder {
   color: #ec6446;
   top: -70%;
 }
+
 .welcomeBlock {
   height: 100%;
   background-image: url("../img/bgAbstract.jpg");
@@ -105,7 +106,7 @@ input::placeholder {
     margin-bottom: 5vh;
     padding: 0;
     height: 20vh;
-    width: 18vw;
+    width: 100%;
   }
   .inputWrapper {
     position: relative;
@@ -119,14 +120,14 @@ input::placeholder {
 
   }
   .userInput {
-    width: 18vw;
+    width: 100%;
     height: 41px;
     border: 1px solid #ced8ea;
     padding-left: 15%;
     color: $darkGray;
   }
   .userErrorInput {
-    width: 18vw;
+    width: 100%;
     height: 41px;
     border: 2px solid #ee6969;
     padding-left: 15%;
@@ -152,7 +153,6 @@ input::placeholder {
   .createAccountWrapper {
     color: $darkGray;
     font-size: 0.9em;
-    //margin-bottom: 7vh;
     margin-top: 3vh;
     .link, .link:hover, .link:visited {
       color: $blueDefault;
@@ -162,11 +162,19 @@ input::placeholder {
 
 }
 
-
-
 //____________________________________________
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
+  .mainWrapper {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+  }
+  .contentBlock {
+    height: 90vh;
+    margin-top: 5vh;
+  }
+
   .hint {
     position: absolute;
     font-size: 1em;
@@ -189,7 +197,7 @@ input::placeholder {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 10%;
-    display: none!important;
+    display: none !important;
 
     .welcome {
       color: white;
@@ -212,18 +220,14 @@ input::placeholder {
   }
 
   .registrationBlock {
-    margin-top: 10vh;
+    margin-top: 5vh;
     height: 100vh;
     width: 100vw;
     background-color: white;
     padding: 0;
     .globalError {
       background-color: #ee6969;
-      justify-content: space-around;
-      padding-top: 5%;
-      padding-bottom: 5%;
-      padding-right: 10%;
-      padding-left: 5%;
+      padding: 5%;
 
       .heart > img {
         width: 25px;
@@ -232,12 +236,13 @@ input::placeholder {
       .exeption {
         color: white;
         width: 80%;
-        font-size: 0.9em;
+        font-size: 0.8em;
         text-align: justify;
+        padding: 0 10%;
       }
     }
     .registrationContent {
-      height: 80%;
+      height: 75vh;
       width: 100%;
       padding: 0 10% 0 10%;
     }
@@ -254,16 +259,17 @@ input::placeholder {
       margin-top: 5vh;
       margin-bottom: 5vh;
       padding: 0;
-      height: 35vh;
-      width: 18vw;
+      height: 38vh;
+      width: 80vw;
     }
     .inputWrapper {
+      margin-top: 2vh;
       position: relative;
       .iconWrapper {
         position: absolute;
         top: 10%;
-        left: 20%;
-        padding: 5% 15% 15% 1%;
+        left: 5%;
+        padding: 2% 5% 2% 1%;
         border-right: 1px solid #ced8ea;
       }
 
@@ -272,14 +278,14 @@ input::placeholder {
       width: 80vw;
       height: 41px;
       border: 1px solid #ced8ea;
-      padding-left: 65%;
+      padding-left: 20%;
       color: $darkGray;
     }
     .userErrorInput {
       width: 80vw;
       height: 41px;
       border: 2px solid #ee6969;
-      padding-left: 65%;
+      padding-left: 20%;
       color: #ee6969;
     }
     .recoverLink, .recoverLink:hover, .recoverLink:visited {
@@ -306,7 +312,7 @@ input::placeholder {
       color: $darkGray;
       font-size: 0.8em;
       text-align: center;
-      margin-bottom: 1vh;
+      margin: 0;
 
       .link, .link:hover, .link:visited {
         color: $blueDefault;
@@ -314,4 +320,155 @@ input::placeholder {
       }
     }
   }
+}
+
+//------------------------------------------------------------
+//
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contentBlock {
+    height: 60vh;
+    margin-top: 5vh;
+  }
+
+  input::placeholder {
+    color: #d1d1d1;
+  }
+
+  .hint {
+    position: absolute;
+    font-size: 1em;
+    color: #70b6e2;
+    top: -70%;
+
+  }
+
+  .error {
+    position: absolute;
+    font-size: 1em;
+    color: #ec6446;
+    top: -70%;
+  }
+  .welcomeBlock {
+    height: 100%;
+    background-image: url("../img/bgAbstract.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3%;
+    .welcomeContent {
+      margin: auto;
+    }
+    .welcome {
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 3vh;
+    }
+    .whiteBlock {
+      width: 40%;
+      height: 4px;
+      background-color: white;
+    }
+    .weOffer {
+      color: white;
+      text-align: justify;
+      line-height: 1.5;
+      margin-top: 5vh;
+    }
+  }
+
+  .registrationBlock {
+    height: 100%;
+    background-color: white;
+    padding: 0;
+    .globalError {
+      background-color: #ee6969;
+      justify-content: space-around;
+      padding: 2%;
+      .heart > img {
+        width: 25px;
+        height: 25px;
+      }
+      .exeption {
+        color: white;
+        width: 80%;
+        text-align: justify;
+        font-size: 0.9em;
+        padding: 1% 10%;
+      }
+    }
+    .registrationContent {
+      height: 80%;
+      width: 100%;
+      padding: 0 5%;
+    }
+    .login {
+      text-transform: uppercase;
+      color: $blueDefault;
+    }
+    .notification {
+      margin-top: 1vh;
+      font-size: 0.9em;
+      color: $darkGray;
+    }
+    #registrationForm {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      padding: 0;
+      height: 20vh;
+      width: 40vw;
+    }
+    .inputWrapper {
+      position: relative;
+      .iconWrapper {
+        position: absolute;
+        top: 5%;
+        left: 3%;
+        padding: 2% 5% 2% 1%;
+        border-right: 1px solid #ced8ea;
+      }
+
+    }
+    .userInput {
+      width: 40vw;
+      height: 41px;
+      border: 1px solid #ced8ea;
+      padding-left: 15%;
+      color: $darkGray;
+    }
+    .userErrorInput {
+      width: 40vw;
+      height: 41px;
+      border: 2px solid #ee6969;
+      padding-left: 15%;
+      color: #ee6969;
+    }
+    .recoverLink, .recoverLink:hover, .recoverLink:visited {
+      color: $blueDefault;
+      font-size: 0.9em;
+      text-decoration: underline
+    }
+    #submitButton {
+      background-image: url("../img/padlock.png");
+      background-repeat: no-repeat;
+      background-color: $blueDefault;
+      background-position: 20%;
+      padding-left: 5%;
+      border: 1px solid $blueDefault;
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      height: 41px;
+      width: 15vw;
+    }
+    .createAccountWrapper {
+      color: $darkGray;
+      font-size: 0.9em;
+      margin-top: 3vh;
+      .link, .link:hover, .link:visited {
+        color: $blueDefault;
+        text-decoration: underline
+      }
+    }
+
+  }
+
 }

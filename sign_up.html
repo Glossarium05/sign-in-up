@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sign_up.css">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="mainWrapper d-flex flex-column justify-content-around justify-content-lg-center justify-content-md-center align-items-center ">
+        <div class="row">
+            <div class="wrapper">
+                <img src="img/logo_synebo_wh.png" alt="">
+            </div>
+        </div>
+        <div class="contentBlock row d-flex justify-content-center align-items-center">
+
+            <div class="welcomeBlock col-lg-4 col-md-4 col-sm-12 d-flex flex-column justify-content-center">
+                <h3 class="welcome"><b> Hello, stranger </b></h3>
+                <div class="whiteBlock"></div>
+
+                <div class="weOffer">
+                    In our portal you can handle all your project in the easiest of possible ways, and keep it under
+                    your total control.
+                </div>
+            </div>
+
+            <div class="registrationBlock col-lg-6 col-md-6 col-12">
+
+                <div class="registrationContent d-flex flex-column justify-content-center">
+                    <h4 class="registration">
+                        <b>Registration </b>
+                    </h4>
+                    <div class="notification">
+                        Fill all the fields right, for avoiding <br> misunderstood.
+                    </div>
+
+                    <form action="" id="registrationForm" class="d-flex flex-column justify-content-between">
+                        <div class="inputWrapper">
+                            <span class="hint">Type here your e-mail</span>
+                            <input type="text" class="userInput" id="login" placeholder="Enter your e-mail here">
+                        </div>
+
+                        <div class="inputWrapper">
+                            <span class="hint">Type here your password</span>
+                            <input type="password" class="userInput" id="password"
+                                   placeholder="Enter your password here">
+                        </div>
+
+                        <div class="inputWrapper">
+                            <!--<span class="hint">Confirm here your password</span>-->
+                            <span class="error">Passwords don't match</span>
+                            <input type="password" class="userErrorInput" id="confirmPass"
+                                   placeholder="Enter your password here">
+                        </div>
+
+                        <div class="wrapper d-flex flex-column justify-content-between align-items-center">
+                            <button id="signUpButton">Create account</button>
+                            <p class="accepting">By signing up I accept with <a href="#">Terms and Conditions</a> </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
