@@ -1,0 +1,81 @@
+$aqua: #f8fdff;
+$blueDefault: #70b6e2;
+$darkGray: #8a8a8a;
+$lightGray: #dcdcdc;
+
+.container {
+  padding: 0 !important;
+}
+
+header {
+  height: 20vh;
+  width: 100vw;
+  background-color: $blueDefault;
+  padding-top: 3vh;
+  .search {
+    height: 41px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 5%;
+  }
+  input::placeholder {
+    color: $blueDefault;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  .dashWrapper {
+    height: 80vh;
+    width: 100vw;
+    background-color: $aqua;
+  }
+
+  .searchWrapper {
+    position: relative;
+    .searchButton {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+    }
+  }
+  .navigation {
+    margin-top: 3vh;
+  }
+  .navItem {
+    padding: 10px;
+    line-height: 20px;
+    height: 40px;
+    background-color: white;
+    color: $blueDefault;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2px;
+    opacity: 0.8;
+    a, a:hover, a:visited {
+      color: $blueDefault;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+  }
+}
+
+.sideBar {
+  padding: 0 !important;
+  margin-top: 10vh;
+  .sideItem {
+    height: 7vh;
+    width: 10vw;
+    .imgWrapper {
+      margin-right: 5%;
+    }
+  }
+}
+
+.dashBoard {
+  height: 60vh;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}

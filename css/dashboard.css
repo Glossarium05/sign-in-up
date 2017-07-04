@@ -1,0 +1,85 @@
+.container {
+  padding: 0 !important;
+}
+
+header {
+  height: 20vh;
+  width: 100vw;
+  background-color: #70b6e2;
+  padding-top: 3vh;
+}
+
+header .search {
+  height: 41px;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 5%;
+}
+
+header input::placeholder {
+  color: #70b6e2;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+header .dashWrapper {
+  height: 80vh;
+  width: 100vw;
+  background-color: #f8fdff;
+}
+
+header .searchWrapper {
+  position: relative;
+}
+
+header .searchWrapper .searchButton {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+
+header .navigation {
+  margin-top: 3vh;
+}
+
+header .navItem {
+  padding: 10px;
+  line-height: 20px;
+  height: 40px;
+  background-color: white;
+  color: #70b6e2;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+header .navItem a, header .navItem a:hover, header .navItem a:visited {
+  color: #70b6e2;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.sideBar {
+  padding: 0 !important;
+  margin-top: 10vh;
+}
+
+.sideBar .sideItem {
+  height: 7vh;
+  width: 10vw;
+}
+
+.sideBar .sideItem .imgWrapper {
+  margin-right: 5%;
+}
+
+.dashBoard {
+  height: 60vh;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
