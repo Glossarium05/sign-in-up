@@ -1,4 +1,5 @@
 .container {
+  width: 1535px !important;
   padding: 0 !important;
 }
 
@@ -9,12 +10,20 @@ header {
   padding-top: 3vh;
 }
 
+header .logoWrapper {
+  padding: 0;
+}
+
+header .searchWrapper {
+  padding: 0;
+}
+
 header .search {
   height: 41px;
   width: 100%;
   border: 1px solid white;
   border-radius: 2px;
-  padding: 5%;
+  padding: 0 3%;
 }
 
 header input::placeholder {
@@ -42,6 +51,7 @@ header .searchWrapper .searchButton {
 
 header .navigation {
   margin-top: 3vh;
+  padding: 0;
 }
 
 header .navItem {
@@ -65,7 +75,7 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
 
 .sideBar {
   padding: 0 !important;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 .sideBar .sideItem {
@@ -78,8 +88,31 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
 }
 
 .dashBoard {
+  margin-top: -6.1vh;
   height: 60vh;
   background-color: white;
-  z-index: 10;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding-top: 1%;
+  padding-left: 2% !important;
+}
+
+.dashBoard .title {
+  color: #70b6e2;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.dashBoard .notification {
+  color: #8a8a8a;
+  font-size: 1em;
+}
+
+.dashBoard .timeline ul:before {
+  content: '';
+  width: 1px;
+  background-color: #dcdcdc;
+}
+
+.dashBoard .timeline li {
+  list-style-type: none;
 }

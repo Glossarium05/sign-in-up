@@ -4,6 +4,7 @@ $darkGray: #8a8a8a;
 $lightGray: #dcdcdc;
 
 .container {
+  width: 1535px !important;
   padding: 0 !important;
 }
 
@@ -12,12 +13,18 @@ header {
   width: 100vw;
   background-color: $blueDefault;
   padding-top: 3vh;
+  .logoWrapper {
+    padding: 0;
+  }
+  .searchWrapper {
+    padding: 0;
+  }
   .search {
     height: 41px;
     width: 100%;
     border: 1px solid white;
     border-radius: 2px;
-    padding: 5%;
+    padding: 0 3%;
   }
   input::placeholder {
     color: $blueDefault;
@@ -41,6 +48,7 @@ header {
   }
   .navigation {
     margin-top: 3vh;
+    padding: 0;
   }
   .navItem {
     padding: 10px;
@@ -63,7 +71,7 @@ header {
 
 .sideBar {
   padding: 0 !important;
-  margin-top: 10vh;
+  margin-top: 5vh;
   .sideItem {
     height: 7vh;
     width: 10vw;
@@ -74,8 +82,23 @@ header {
 }
 
 .dashBoard {
+  margin-top: -6.1vh;
   height: 60vh;
   background-color: white;
-  z-index: 10;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding-top: 1%;
+  padding-left: 2% !important;
+  .title {
+    color: $blueDefault;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .notification {
+    color: $darkGray;
+    font-size: 1em;
+  }
+
+  li {
+    list-style-type: none;
+  }
 }
