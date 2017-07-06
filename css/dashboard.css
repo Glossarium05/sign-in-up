@@ -3,6 +3,11 @@
   padding: 0 !important;
 }
 
+@font-face {
+  font-family: FontAwesome;
+  src: url(../fonts/fontawesome-webfont.woff);
+}
+
 header {
   height: 20vh;
   width: 100vw;
@@ -107,12 +112,236 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
   font-size: 1em;
 }
 
-.dashBoard .timeline ul:before {
+.dashBoard ul {
+  position: relative;
+}
+
+.dashBoard ul:before {
   content: '';
+  display: block;
+  position: absolute;
+  top: 1%;
+  left: 1%;
   width: 1px;
+  height: 100%;
+  background-color: #70b6e2;
+}
+
+.dashBoard li {
+  list-style-type: none;
+  position: relative;
+}
+
+.dashBoard li h6 {
+  color: #dcdcdc;
+  text-transform: uppercase;
+}
+
+.dashBoard li .report {
+  font-size: 0.9em;
+  color: #616161;
+}
+
+.dashBoard li .report .taskName, .dashBoard li .report .taskName:hover, .dashBoard li .report .taskName:visited {
+  color: #70b6e2;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.dashBoard li .report .status-done {
+  font-size: 0.9em;
+  color: #8cca49;
+}
+
+.dashBoard li .report .status-progress {
+  font-size: 0.9em;
+  color: #616161;
+}
+
+.dashBoard li .report .status-cancelled {
+  font-size: 0.9em;
+  color: #ee6969;
+}
+
+.dashBoard li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: -8.5%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dashBoard li.done:before {
+  background-color: #8cca49;
+}
+
+.dashBoard li.in-progress:before {
   background-color: #dcdcdc;
 }
 
-.dashBoard .timeline li {
-  list-style-type: none;
+.dashBoard li.cancelled:before {
+  background-color: #ee6969;
+}
+
+.dashBoard .second-block .projectsCount {
+  color: #dcdcdc;
+}
+
+.dashBoard .second-block .projectsCount span.number {
+  font-size: 3em;
+  color: #616161;
+}
+
+.dashBoard .third-block .dialog-timing {
+  font-size: 0.8em;
+  color: #dcdcdc;
+}
+
+.dashBoard .third-block .dialog-timing a {
+  font-size: 0.8em;
+  color: #70b6e2;
+  text-decoration: underline;
+}
+
+.dashBoard .third-block .dialog-wrapper {
+  height: 70%;
+}
+
+.dashBoard .third-block .inner-message-box {
+  position: relative;
+  padding-right: 5%;
+}
+
+.dashBoard .third-block .inner-message {
+  width: 80%;
+  height: 50%;
+  border: 2px solid #dcdcdc;
+  border-radius: 2px;
+  font-size: 0.8em;
+  color: #616161;
+}
+
+.dashBoard .third-block .inner-message:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 100%;
+  border: 8px solid;
+  border-color: #dcdcdc transparent transparent #dcdcdc;
+}
+
+.dashBoard .third-block .inner-message:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 11.5%;
+  top: 98%;
+  border: 6px solid;
+  border-color: #fff transparent transparent #fff;
+}
+
+.dashBoard .third-block .outer-message-box {
+  padding-left: 5%;
+  margin-left: 10%;
+}
+
+.dashBoard .third-block .outer-message {
+  width: 80%;
+  height: 50%;
+  border: 2px solid #e4f1f6;
+  background-color: #e4f1f6;
+  border-radius: 2px;
+  font-size: 0.8em;
+  color: #616161;
+}
+
+.dashBoard .third-block .outer-message:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 60%;
+  top: 78%;
+  border: 9px solid transparent;
+  border-top: 8px solid #e4f1f6;
+  border-right: 8px solid #e4f1f6;
+}
+
+.dashBoard .line {
+  width: 100%;
+  height: 1px;
+  background-color: #dcdcdc;
+}
+
+.dashBoard .second-line .select-status {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #39acd0;
+  border-radius: 2px;
+}
+
+.dashBoard .second-line .select-status option {
+  width: 100%;
+}
+
+.dashBoard .second-line .item {
+  color: #dcdcdc;
+}
+
+.dashBoard .second-line .item i {
+  margin-left: 4%;
+}
+
+.dashBoard .second-line .fixed {
+  color: #dcdcdc;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.dashBoard .second-line .link-wrapper {
+  width: 48%;
+}
+
+.dashBoard .second-line .link-wrapper .nameProject, .dashBoard .second-line .link-wrapper .nameProject:hover, .dashBoard .second-line .link-wrapper .nameProject:visited {
+  color: #70b6e2;
+  text-decoration: underline;
+}
+
+.dashBoard .second-line .button-wrapper {
+  width: 30%;
+}
+
+.dashBoard .second-line .message {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #8cca49;
+  border-radius: 1px;
+}
+
+.dashBoard .second-line .plus {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #70b6e2;
+  color: #70b6e2;
+  font-size: 0.9em;
+  border-radius: 1px;
+}
+
+.dashBoard .second-line .delivery-date {
+  width: 100%;
+}
+
+.dashBoard .second-line p.deadline {
+  text-transform: uppercase;
+  color: #dcdcdc;
+}
+
+.dashBoard .second-line p.deadline, .dashBoard .second-line p.date {
+  margin: 0;
 }

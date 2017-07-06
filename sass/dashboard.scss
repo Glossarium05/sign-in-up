@@ -2,10 +2,16 @@ $aqua: #f8fdff;
 $blueDefault: #70b6e2;
 $darkGray: #8a8a8a;
 $lightGray: #dcdcdc;
-
+$lightGreen: #8cca49;
+$extraGray: #616161;
 .container {
   width: 1535px !important;
   padding: 0 !important;
+}
+
+@font-face {
+  font-family: FontAwesome;
+  src: url(../fonts/fontawesome-webfont.woff);
 }
 
 header {
@@ -93,12 +99,217 @@ header {
     text-transform: uppercase;
     font-weight: 600;
   }
+
   .notification {
     color: $darkGray;
     font-size: 1em;
   }
-
+  ul {
+    position: relative;
+  }
+  ul:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 1px;
+    height: 100%;
+    background-color: $blueDefault;
+  }
   li {
     list-style-type: none;
+    position: relative;
+    h6 {
+      color: $lightGray;
+      text-transform: uppercase;
+    }
+    .report {
+      font-size: 0.9em;
+      color: $extraGray;
+      .taskName, .taskName:hover, .taskName:visited {
+        color: $blueDefault;
+        font-size: 0.9em;
+        text-decoration: underline;
+      }
+      .status-done {
+        font-size: 0.9em;
+        color: $lightGreen
+      }
+      .status-progress {
+        font-size: 0.9em;
+        color: $extraGray;
+      }
+      .status-cancelled {
+        font-size: 0.9em;
+        color: #ee6969;
+      }
+    }
+  }
+  li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: -8.5%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  li.done:before {
+    background-color: $lightGreen;
+  }
+  li.in-progress:before {
+    background-color: $lightGray;
+  }
+  li.cancelled:before {
+    background-color: #ee6969;
+  }
+
+  .second-block {
+    .projectsCount {
+      color: $lightGray;
+      span.number {
+        font-size: 3em;
+        color: #616161;
+      }
+    }
+  }
+
+  .third-block {
+    .dialog-timing {
+      font-size: 0.8em;
+      color: $lightGray;
+      a {
+        font-size: 0.8em;
+        color: $blueDefault;
+        text-decoration: underline;
+
+      }
+    }
+    .dialog-wrapper {
+      height: 70%;
+    }
+    .inner-message-box {
+      position: relative;
+      padding-right: 5%;
+    }
+    .inner-message {
+      width: 80%;
+      height: 50%;
+      border: 2px solid $lightGray;
+      border-radius: 2px;
+      font-size: 0.8em;
+      color: $extraGray;
+    }
+    .inner-message:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 30px;
+      top: 100%;
+      border: 8px solid;
+      border-color: $lightGray transparent transparent $lightGray;
+    }
+    .inner-message:after {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 11.5%;
+      top: 98%;
+      border: 6px solid;
+      border-color: #fff transparent transparent #fff;
+    }
+
+    .outer-message-box {
+      padding-left: 5%;
+      margin-left: 10%;
+    }
+    .outer-message {
+      width: 80%;
+      height: 50%;
+      border: 2px solid #e4f1f6;
+      background-color: #e4f1f6;
+      border-radius: 2px;
+      font-size: 0.8em;
+      color: $extraGray;
+    }
+    .outer-message:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 60%;
+      top: 78%;
+      border: 9px solid transparent;
+      border-top: 8px solid #e4f1f6;
+      border-right: 8px solid #e4f1f6;
+    }
+
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: $lightGray;
+  }
+  .second-line {
+    .select-status {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #39acd0;
+      border-radius: 2px;
+      option {
+        width: 100%;
+      }
+    }
+    .item {
+      color: $lightGray;
+      i {
+        margin-left: 4%;
+      }
+    }
+
+    .fixed {
+      color: $lightGray;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+    .link-wrapper {
+      width: 48%;
+      .nameProject, .nameProject:hover, .nameProject:visited {
+        color: $blueDefault;
+        text-decoration: underline;
+      }
+    }
+    .button-wrapper {
+      width: 30%;
+
+    }
+    .message {
+      width: 44px;
+      height: 44px;
+      border: 1px solid $lightGreen;
+      border-radius: 1px;
+    }
+    .plus {
+      width: 44px;
+      height: 44px;
+      border: 1px solid $blueDefault;
+      color: $blueDefault;
+      font-size: 0.9em;
+      border-radius: 1px;
+    }
+    .delivery-date {
+      width: 100%;
+    }
+    p.deadline {
+      text-transform: uppercase;
+      color: $lightGray;
+    }
+    p.deadline, p.date {
+      margin: 0;
+    }
   }
 }
