@@ -73,6 +73,9 @@ header {
       text-decoration: none;
     }
   }
+  .active {
+    opacity: 1;
+  }
 }
 
 .sideBar {
@@ -85,15 +88,38 @@ header {
       margin-right: 5%;
     }
   }
+  a.point, a.point:visited {
+    color: $darkGray;
+    text-decoration: none;
+  }
+
+  a.point:hover {
+    color: $blueDefault;
+  }
+  .point-message:after {
+    content: '3';
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 2px;
+    background-color: $blueDefault;
+    position: absolute;
+    left: 43%;
+    top: 30%;
+  }
 }
 
 .dashBoard {
-  margin-top: -6.1vh;
+  margin-top: -6.5vh;
   height: 60vh;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding-top: 1%;
   padding-left: 2% !important;
+  padding-bottom: 2%;
   .title {
     color: $blueDefault;
     text-transform: uppercase;
@@ -117,10 +143,13 @@ header {
     height: 100%;
     background-color: $blueDefault;
   }
+
   li {
     list-style-type: none;
     position: relative;
-    h6 {
+    .li-title {
+      margin: 0;
+      font-size: 0.9em;
       color: $lightGray;
       text-transform: uppercase;
     }
@@ -181,7 +210,6 @@ header {
       font-size: 0.8em;
       color: $lightGray;
       a {
-        font-size: 0.8em;
         color: $blueDefault;
         text-decoration: underline;
 
@@ -195,6 +223,7 @@ header {
       padding-right: 5%;
     }
     .inner-message {
+      padding: 3%;
       width: 80%;
       height: 50%;
       border: 2px solid $lightGray;
@@ -228,6 +257,7 @@ header {
       margin-left: 10%;
     }
     .outer-message {
+      padding: 3%;
       width: 80%;
       height: 50%;
       border: 2px solid #e4f1f6;
@@ -242,12 +272,19 @@ header {
       width: 0;
       height: 0;
       left: 60%;
-      top: 78%;
+      top: 86%;
       border: 9px solid transparent;
       border-top: 8px solid #e4f1f6;
       border-right: 8px solid #e4f1f6;
     }
-
+    .message-link-wrapper {
+      margin-top: 5%;
+    }
+    .message-link {
+      font-size: 0.9em;
+      color: $blueDefault;
+      text-decoration: underline;
+    }
   }
   .line {
     width: 100%;
@@ -260,56 +297,130 @@ header {
       height: 40px;
       border: 1px solid #39acd0;
       border-radius: 2px;
+      padding: 5%;
+      color: $extraGray;
       option {
         width: 100%;
-      }
-    }
-    .item {
-      color: $lightGray;
-      i {
-        margin-left: 4%;
+        color: $extraGray;
       }
     }
 
-    .fixed {
-      color: $lightGray;
-      text-transform: uppercase;
-      font-size: 0.9em;
-    }
-    .link-wrapper {
-      width: 48%;
-      .nameProject, .nameProject:hover, .nameProject:visited {
-        color: $blueDefault;
-        text-decoration: underline;
-      }
-    }
-    .button-wrapper {
-      width: 30%;
-
-    }
-    .message {
-      width: 44px;
-      height: 44px;
-      border: 1px solid $lightGreen;
-      border-radius: 1px;
-    }
-    .plus {
-      width: 44px;
-      height: 44px;
-      border: 1px solid $blueDefault;
-      color: $blueDefault;
-      font-size: 0.9em;
-      border-radius: 1px;
-    }
-    .delivery-date {
+    table {
       width: 100%;
+      border: 2px solid white;
+      border-collapse: collapse;
+
+      td.empty {
+        border: 1px solid white;
+      }
+      tr {
+        height: 7vh;
+      }
+      .tr-blue {
+        background-color: $aqua;
+      }
+
+      .pg-name {
+        width: 40%;
+
+      }
+      .delivery-date {
+        width: 17%;
+        border-left: 1px solid $lightGray;
+      }
+      .hours {
+        width: 17%;
+        border-left: 1px solid $lightGray;
+      }
+      .status {
+        width: 17%;
+        border-left: 1px solid $lightGray;
+      }
+      .empty {
+        width: 12%;
+      }
+
+      th {
+        color: $lightGray;
+        font-weight: normal;
+        p {
+          margin: 0;
+        }
+        i {
+          font-size: 0.7em;
+        }
+      }
     }
-    p.deadline {
-      text-transform: uppercase;
-      color: $lightGray;
-    }
-    p.deadline, p.date {
-      margin: 0;
-    }
+  ;
   }
 }
+
+
+
+.fixed {
+  color: $lightGray;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.link-wrapper {
+  width: 48%;
+  .nameProject, .nameProject:hover, .nameProject:visited {
+    color: $blueDefault;
+    text-decoration: underline;
+    margin-right: 3%;
+    margin-top: 2%;
+  }
+}
+
+.button-wrapper {
+  width: 30%;
+}
+
+.message {
+  width: 44px;
+  height: 44px;
+  border: 1px solid $lightGreen;
+  border-radius: 1px;
+}
+
+.plus {
+  width: 44px;
+  height: 44px;
+  border: 1px solid $blueDefault;
+  color: $blueDefault;
+  font-size: 0.9em;
+  border-radius: 1px;
+}
+
+.note {
+  p {
+    margin: 0;
+  }
+  p.in-progress {
+    color: $blueDefault;
+  }
+  p.on-hold {
+    color: $darkGray;
+  }
+  p.closed {
+    color: $lightGreen;
+  }
+}
+
+.note-title {
+  text-transform: uppercase;
+  color: $lightGray;
+}
+
+.note-subtitle {
+  font-size: 0.9em;
+  color: $extraGray;
+}
+
+.link-wrap {
+  position: relative;
+  margin-top: -4%;
+}
+
+

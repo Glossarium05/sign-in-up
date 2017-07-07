@@ -78,6 +78,10 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
   text-decoration: none;
 }
 
+header .active {
+  opacity: 1;
+}
+
 .sideBar {
   padding: 0 !important;
   margin-top: 5vh;
@@ -92,13 +96,38 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
   margin-right: 5%;
 }
 
+.sideBar a.point, .sideBar a.point:visited {
+  color: #8a8a8a;
+  text-decoration: none;
+}
+
+.sideBar a.point:hover {
+  color: #70b6e2;
+}
+
+.sideBar .point-message:after {
+  content: '3';
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 2px;
+  background-color: #70b6e2;
+  position: absolute;
+  left: 43%;
+  top: 30%;
+}
+
 .dashBoard {
-  margin-top: -6.1vh;
+  margin-top: -6.5vh;
   height: 60vh;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding-top: 1%;
   padding-left: 2% !important;
+  padding-bottom: 2%;
 }
 
 .dashBoard .title {
@@ -132,7 +161,9 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
   position: relative;
 }
 
-.dashBoard li h6 {
+.dashBoard li .li-title {
+  margin: 0;
+  font-size: 0.9em;
   color: #dcdcdc;
   text-transform: uppercase;
 }
@@ -201,7 +232,6 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
 }
 
 .dashBoard .third-block .dialog-timing a {
-  font-size: 0.8em;
   color: #70b6e2;
   text-decoration: underline;
 }
@@ -216,6 +246,7 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
 }
 
 .dashBoard .third-block .inner-message {
+  padding: 3%;
   width: 80%;
   height: 50%;
   border: 2px solid #dcdcdc;
@@ -252,6 +283,7 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
 }
 
 .dashBoard .third-block .outer-message {
+  padding: 3%;
   width: 80%;
   height: 50%;
   border: 2px solid #e4f1f6;
@@ -267,10 +299,20 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
   width: 0;
   height: 0;
   left: 60%;
-  top: 78%;
+  top: 86%;
   border: 9px solid transparent;
   border-top: 8px solid #e4f1f6;
   border-right: 8px solid #e4f1f6;
+}
+
+.dashBoard .third-block .message-link-wrapper {
+  margin-top: 5%;
+}
+
+.dashBoard .third-block .message-link {
+  font-size: 0.9em;
+  color: #70b6e2;
+  text-decoration: underline;
 }
 
 .dashBoard .line {
@@ -284,47 +326,98 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
   height: 40px;
   border: 1px solid #39acd0;
   border-radius: 2px;
+  padding: 5%;
+  color: #616161;
 }
 
 .dashBoard .second-line .select-status option {
   width: 100%;
+  color: #616161;
 }
 
-.dashBoard .second-line .item {
+.dashBoard .second-line table {
+  width: 100%;
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+
+.dashBoard .second-line table td.empty {
+  border: 1px solid white;
+}
+
+.dashBoard .second-line table tr {
+  height: 7vh;
+}
+
+.dashBoard .second-line table .tr-blue {
+  background-color: #f8fdff;
+}
+
+.dashBoard .second-line table .pg-name {
+  width: 40%;
+}
+
+.dashBoard .second-line table .delivery-date {
+  width: 17%;
+  border-left: 1px solid #dcdcdc;
+}
+
+.dashBoard .second-line table .hours {
+  width: 17%;
+  border-left: 1px solid #dcdcdc;
+}
+
+.dashBoard .second-line table .status {
+  width: 17%;
+  border-left: 1px solid #dcdcdc;
+}
+
+.dashBoard .second-line table .empty {
+  width: 12%;
+}
+
+.dashBoard .second-line table th {
   color: #dcdcdc;
+  font-weight: normal;
 }
 
-.dashBoard .second-line .item i {
-  margin-left: 4%;
+.dashBoard .second-line table th p {
+  margin: 0;
 }
 
-.dashBoard .second-line .fixed {
+.dashBoard .second-line table th i {
+  font-size: 0.7em;
+}
+
+.fixed {
   color: #dcdcdc;
   text-transform: uppercase;
   font-size: 0.9em;
 }
 
-.dashBoard .second-line .link-wrapper {
+.link-wrapper {
   width: 48%;
 }
 
-.dashBoard .second-line .link-wrapper .nameProject, .dashBoard .second-line .link-wrapper .nameProject:hover, .dashBoard .second-line .link-wrapper .nameProject:visited {
+.link-wrapper .nameProject, .link-wrapper .nameProject:hover, .link-wrapper .nameProject:visited {
   color: #70b6e2;
   text-decoration: underline;
+  margin-right: 3%;
+  margin-top: 2%;
 }
 
-.dashBoard .second-line .button-wrapper {
+.button-wrapper {
   width: 30%;
 }
 
-.dashBoard .second-line .message {
+.message {
   width: 44px;
   height: 44px;
   border: 1px solid #8cca49;
   border-radius: 1px;
 }
 
-.dashBoard .second-line .plus {
+.plus {
   width: 44px;
   height: 44px;
   border: 1px solid #70b6e2;
@@ -333,15 +426,33 @@ header .navItem a, header .navItem a:hover, header .navItem a:visited {
   border-radius: 1px;
 }
 
-.dashBoard .second-line .delivery-date {
-  width: 100%;
+.note p {
+  margin: 0;
 }
 
-.dashBoard .second-line p.deadline {
+.note p.in-progress {
+  color: #70b6e2;
+}
+
+.note p.on-hold {
+  color: #8a8a8a;
+}
+
+.note p.closed {
+  color: #8cca49;
+}
+
+.note-title {
   text-transform: uppercase;
   color: #dcdcdc;
 }
 
-.dashBoard .second-line p.deadline, .dashBoard .second-line p.date {
-  margin: 0;
+.note-subtitle {
+  font-size: 0.9em;
+  color: #616161;
+}
+
+.link-wrap {
+  position: relative;
+  margin-top: -4%;
 }
